@@ -36,4 +36,13 @@ class Code
   def length
     self.pegs.length
   end
+
+  def num_exact_matches(guess_code_inst)
+    guess_arr = guess_code_inst.pegs
+    correct_count = 0
+    guess_arr.each_with_index do |peg, idx|
+      correct_count += 1 if guess_arr[idx] == self.pegs[idx]
+    end
+    correct_count
+  end
 end
