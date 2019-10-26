@@ -32,4 +32,8 @@ class Code
   def [](index)
     self.pegs[index]
   end
+
+  def length
+    self.pegs.length
+  end
 end
