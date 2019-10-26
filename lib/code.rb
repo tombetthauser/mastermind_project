@@ -63,5 +63,4 @@ class Code
     self.pegs == arg_inst.pegs
   end
 
-  
 end
