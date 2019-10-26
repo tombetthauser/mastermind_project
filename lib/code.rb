@@ -29,4 +29,7 @@ class Code
     @pegs = chars_arr.map(&:upcase)
   end
 
+  def [](index)
+    self.pegs[index]
+  end
 end
