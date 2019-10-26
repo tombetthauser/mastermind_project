@@ -45,4 +45,23 @@ class Code
     end
     correct_count
   end
+  
+  def num_near_matches(guess_code_inst)
+    guess_arr = guess_code_inst.pegs
+    near_count = 0
+    guess_arr.each_with_index do |peg, idx|
+      if self.pegs.include?(guess_arr[idx])
+        unless guess_arr[idx] == self.pegs[idx]
+          near_count += 1 
+        end
+      end
+    end
+    near_count
+  end
+
+  def ==(arg_inst)
+    self.pegs == arg_inst.pegs
+  end
+
+  
 end
